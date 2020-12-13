@@ -1,13 +1,13 @@
 -- 1. List the following details of each employee: employee number, last name, first name, sex, and salary.
 
-SELECT Employees.emp_no, 
-	Employees.last_name, 
-	Employees.first_name,
-	Employees.sex,
-	Salaries.salary
-FROM Employees
-INNER JOIN Salaries ON
-Employees.emp_no = Salaries.emp_no;
+SELECT employees.emp_no, 
+	employees.last_name, 
+	employees.first_name,
+	employees.sex,
+	salaries.salary
+FROM employees
+INNER JOIN salaries ON
+employees.emp_no = salaries.emp_no;
 
 -- Test that the above is right
 SELECT * FROM employees;
@@ -18,14 +18,26 @@ SELECT * FROM employees;
 
 SELECT employees.emp_no,
 	employees.first_name,
-	employees.last_name
-FROM employees
-WHERE hire_date > 12/31/1985 and hire_date < 1/1/1987;
-
-
-SELECT employees.emp_no,
-	employees.first_name,
 	employees.last_name,
+	employees.hire_date
 FROM employees
-WHERE hire_date > '12/31/1985' and hire_date < '01/01/1987';
+WHERE hire_date > '1985-12-31' and hire_date < '1987-01-01';
+
+
+--3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
+SELECT * FROM departments
+SELECT * FROM dept_manager
+
+SELECT departments.dept_no,
+	departments.dept_name,
+	dept_manager.emp_no,
+	employees.first_name,
+	employees.last_name
+FROM dept_manager
+INNER JOIN departments ON
+departments.dept_no = dept_manager.dept_no
+LEFT JOIN employees ON
+dept_manager.emp_no = employees.emp_no;	
+
+
 
