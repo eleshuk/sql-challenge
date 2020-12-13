@@ -1,9 +1,12 @@
 # sql-challenge
 
-**Included in this repository is:**
- > ERD for tables with employee, department, salary, title, and manager data saved as .png.
- > Schemata with data entered in the tables listed above.  
- > Data analysis (expanded on below).  
+**Task:**
+ > To research employees at Pewlett Hackard from the 1980s and 1990s. All that remain from that time period are six .csv files.  
+ 
+**Included in this repository is:**  
+ > Data modeling -- using an ERD for tables with employee, department, salary, title, and manager data (also saved as .png).
+ > Data engineering -- created a schemata with data entered in the tables listed above.  
+ > Data Analysis -- expanded on below.  
 
 **Data Analysis**
 
