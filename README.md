@@ -2,8 +2,9 @@
 
 **Included in this repository is:**
  > ERD for tables with employee, department, salary, title, and manager data saved as .png.
- > Schemata with data entered in the tables listed above.
- > Data analysis
+ > Schemata with data entered in the tables listed above.  
+ > Data analysis (expanded on below).  
+
 **Data Analysis**
 
 > Listed the following details of each employee: employee number, last name, first name, sex, and salary.
