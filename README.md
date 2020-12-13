@@ -10,6 +10,7 @@
 
 **Data modeling**  
 ![](https://github.com/eleshuk/sql-challenge/blob/main/ERD_image.png)
+
 **Data Analysis**
 
 > Listed the following details of each employee: employee number, last name, first name, sex, and salary.
