@@ -2,9 +2,6 @@
 -- Link to schema: https://app.quickdatabasediagrams.com/#/d/uOZttv
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
--- Modify this code to update the DB schema diagram.
--- To reset the sample schema, replace everything with
--- two dots ('..' - without quotes).
 
 CREATE TABLE "departments" (
     "dept_no" VARCHAR   NOT NULL,
@@ -14,49 +11,43 @@ CREATE TABLE "departments" (
      )
 );
 
+DROP TABLE titles
 CREATE TABLE "titles" (
     "title_id" VARCHAR   NOT NULL,
-    "title" VARCHAR   NOT NULL
+    "title" VARCHAR   NOT NULL,
+	CONSTRAINT pk_titles PRIMARY KEY (title_id)
 );
-
-SELECT * FROM "titles";
 
 CREATE TABLE "salaries" (
     "emp_no" INT   NOT NULL,
     "salary" INT   NOT NULL
 );
 
-
+-- DROP TABLE if exists employees cascade;
 CREATE TABLE "employees" (
     "emp_no" INT   NOT NULL,
     "emp_title_id" VARCHAR   NOT NULL,
-    "birth_date" VARCHAR   NOT NULL,
+    "birth_date" DATE   NOT NULL,
     "first_name" VARCHAR   NOT NULL,
     "last_name" VARCHAR   NOT NULL,
     "sex" VARCHAR   NOT NULL,
-    "hire_date" VARCHAR   NOT NULL,
+    "hire_date" DATE   NOT NULL,
     CONSTRAINT "pk_employees" PRIMARY KEY (
         "emp_no"
      )
 );
-
---SELECT * FROM "employees";
-
---DROP TABLE "dept_emp";
+SELECT * FROM employees;
 
 CREATE TABLE "dept_emp" (
     "emp_no" INT   NOT NULL,
 	"dept_no" VARCHAR   NOT NULL
 );
 
---SELECT * FROM "dept_emp";
 
 CREATE TABLE "dept_manager" (
     "dept_no" VARCHAR   NOT NULL,
 	"emp_no" INT   NOT NULL   
 );
-
---SELECT * FROM "dept_manager";
 
 ALTER TABLE "salaries" ADD CONSTRAINT "fk_salaries_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
