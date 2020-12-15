@@ -9,7 +9,7 @@
  > Data Analysis -- expanded on below.     
 
 **Data modeling**  
-![](https://github.com/eleshuk/sql-challenge/blob/main/ERD_image.png)
+![](https://github.com/eleshuk/sql-challenge/blob/main/Images/ERD_image.png)
 
 **Data Analysis**
 
@@ -28,3 +28,7 @@
 > Listed all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
 
 > In descending order, Listed the frequency count of employee last names, i.e., how many employees share each last name.
+
+## Bonus
+The dataset seems to be fake. The salary ranges do not match the level of experience required for various positions within the company. It seems highly unlikely that a senior engineer would be making about the same as an engineer.
+![](https://github.com/eleshuk/sql-challenge/blob/main/Images/title_avg_salary.png)
